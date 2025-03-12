@@ -1,16 +1,27 @@
-# it_hub
+# It-hub
 
-A new Flutter project.
+---
 
-## Getting Started
+## Создание нового проекта
 
-This project is a starting point for a Flutter application.
+Для создания нового Flutter проекта можно использовать команду
+```sh
+$ flutter create app_name
+```
+Эта команда создаст проект ```app_name``` с поддержкой всех платформ, доступных в вашей среде разработки.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Для создания нового Flutter проекта для конкретных платформ можно использовать команду
+```sh
+$ flutter create --platforms <платформы> app_name
+```
+Где ```<платформы>``` — это список платформ, разделенных запятыми. Например:
+- ```android```
+- ```ios```
+- ```web```
+- ```windows```
+- ```macos```
+- ```linux```
+- 
+```sh
+$ flutter create --platforms android,ios app_name
+```
