@@ -5,7 +5,9 @@
 ## Установка Flutter
 
 Документаци по установке Flutter на [Windows](https://docs.flutter.dev/get-started/install/windows).
+
 Документаци по установке Flutter на [macOS](https://docs.flutter.dev/get-started/install/macos).
+
 Документаци по установке Flutter на [Linux](https://docs.flutter.dev/get-started/install/linux).
 
 ---
