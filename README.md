@@ -21,7 +21,6 @@ $ flutter create --platforms <платформы> app_name
 - ```windows```
 - ```macos```
 - ```linux```
-- 
 ```sh
 $ flutter create --platforms android,ios app_name
 ```
