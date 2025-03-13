@@ -10,6 +10,15 @@ class ItHubApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: BasicWidgetsMaterial());
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Домашняя страница'),
+          backgroundColor: Colors.orange,
+          centerTitle: true,
+        ),
+        body: Center(child: BasicWidgetsMaterial()),
+      ),
+    );
   }
 }
