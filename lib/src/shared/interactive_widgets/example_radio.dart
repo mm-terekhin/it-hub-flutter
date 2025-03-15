@@ -18,29 +18,39 @@ class _ExampleRadioState extends State<ExampleRadio> {
 
     return Column(
       children: [
-        Radio<Gender>(
-          // Значение, связанное с радио-кнопкой.
-          value: Gender.male,
-          // Текущее выбранное значение в группе радио-кнопок.
-          groupValue: _selectedGender,
-          // Вызывается при выборе радио-кнопки.
-          onChanged: (Gender? value) {
-            setState(() {
-              _selectedGender = value;
-            });
-          },
-          // Цвет радио-кнопки, когда она выбрана.
-          activeColor: Colors.blue,
+        Row(
+          children: [
+            Text('Man'),
+            Radio<Gender>(
+              // Значение, связанное с радио-кнопкой.
+              value: Gender.male,
+              // Текущее выбранное значение в группе радио-кнопок.
+              groupValue: _selectedGender,
+              // Вызывается при выборе радио-кнопки.
+              onChanged: (Gender? value) {
+                setState(() {
+                  _selectedGender = value;
+                });
+              },
+              // Цвет радио-кнопки, когда она выбрана.
+              activeColor: Colors.blue,
+            ),
+          ],
         ),
-        Radio<Gender>(
-          value: Gender.female,
-          groupValue: _selectedGender,
-          onChanged: (Gender? value) {
-            setState(() {
-              _selectedGender = value;
-            });
-          },
-          activeColor: Colors.blue,
+        Row(
+          children: [
+            Text('Woman'),
+            Radio<Gender>(
+              value: Gender.female,
+              groupValue: _selectedGender,
+              onChanged: (Gender? value) {
+                setState(() {
+                  _selectedGender = value;
+                });
+              },
+              activeColor: Colors.blue,
+            ),
+          ],
         ),
       ],
     );

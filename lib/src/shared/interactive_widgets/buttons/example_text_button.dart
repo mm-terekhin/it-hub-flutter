@@ -11,6 +11,12 @@ class ExampleTextButton extends StatelessWidget {
     return TextButton(
       // Стили применяемые к кнопке
       style: ButtonStyle(
+        // Стиль текста в кнопке
+        textStyle: WidgetStateProperty.all(
+          TextStyle(fontSize: 32, color: Colors.orange),
+        ),
+        // Цвет переднего плана
+        foregroundColor: WidgetStateProperty.all(Colors.orange),
         // Цвет заднего фона
         backgroundColor: WidgetStateProperty.resolveWith((
           Set<WidgetState> states,

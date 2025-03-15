@@ -11,10 +11,26 @@ class ExampleOutlinedButton extends StatelessWidget {
     return OutlinedButton(
       // Стили применяемые к кнопке
       style: ButtonStyle(
+        // Цвет границы
+        side: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.pressed)) {
+            return BorderSide(
+              color: Colors.red,
+              width: 4,
+              style: BorderStyle.solid,
+            );
+          }
+
+          return BorderSide(
+            color: Colors.grey,
+            width: 4,
+            style: BorderStyle.solid,
+          );
+        }),
         // Цвет заднего фона
         backgroundColor: WidgetStateProperty.resolveWith((
-            Set<WidgetState> states,
-            ) {
+          Set<WidgetState> states,
+        ) {
           if (states.contains(WidgetState.pressed)) {
             // Если кнопка нажата, задний фон - голубой
             return Colors.blue;

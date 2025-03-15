@@ -26,7 +26,7 @@ class ExampleTextField extends StatelessWidget {
       keyboardType: TextInputType.text,
 
       // Если true, текст скрывается (например, для ввода пароля).
-      obscureText: true,
+      obscureText: false,
 
       // Определяет максимальное количество строк в поле ввода. Если null, поле может расширяться бесконечно.
       maxLines: 5,
@@ -39,6 +39,8 @@ class ExampleTextField extends StatelessWidget {
 
       // Определяет внешний вид текстового поля, включая метку, подсказку, иконки, границы и т.д.
       decoration: InputDecoration(
+        // Отступы внтури поля
+        contentPadding: EdgeInsets.symmetric(horizontal: 16),
         // Метка над полем ввода.
         labelText: 'Имя',
         // Подсказка, которая отображается, когда поле пустое.
@@ -46,7 +48,11 @@ class ExampleTextField extends StatelessWidget {
         // Иконка перед текстовым полем.
         prefixIcon: Icon(Icons.person),
         // Граница поля
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(borderSide: BorderSide.none),
+        // Задний фон
+        fillColor: Colors.grey,
+        // Значение типа bool, которое указывает, будет ли применяться заполнение виджета цветом из параметра fillColor
+        filled: true,
       ),
     );
   }
